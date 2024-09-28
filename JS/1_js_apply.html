@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply JS</title>
+</head>
+
+<body>
+    <h1 id="myH1">Hello javaScript</h1>
+
+    <label id="username">User Name</label>
+    <input type="text" id="txtUserName"><br>
+    <button id="btnSubmit">submit</button>
+
+
+
+
+
+
+    <!--script tag -->
+    <script>
+        let username;
+        <!--similar to println  -->
+        console.log("Welcome to JavaScript");
+        document.getElementById("btnSubmit").onclick = function (){
+           username = document.getElementById("txtUserName").value;
+           document.getElementById("myH1").textContent = `Hello ${username}`;
+        }
+    </script>
+
+    <!--external script-->
+    <script src="script.js"></script>
+</body>
+</html>
