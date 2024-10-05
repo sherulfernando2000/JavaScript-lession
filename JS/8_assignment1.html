@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment 1</title>
+    <style>
+        div:first-child{
+            width: 50vw;
+            height: 90vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #ffcfcf;
+            border: 2px black solid;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button{
+            width: 10vw;
+            height: 50px;
+            background-color: purple;
+            color: white;
+            font-size: 20px;
+        }
+
+        .perCircle{
+            width: 150px;
+            height: 150px;
+            background-color: grey;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+<body>
+<div>
+<h1>Match</h1>
+<label>Girl</label>
+<input type="text" id="girl">
+
+<span>X </span>
+
+<label>Boy</label>
+<input type="text" id="boy">
+
+<br>
+<br>
+<button id="match">Match</button>
+    <br>
+    <br>
+
+<div class="perCircle">
+    <h1 id="myD1">----%</h1>
+</div>
+
+
+</div>
+<script>
+   var x = document.getElementById("girl").value.length;
+    var y = document.getElementById("boy").value.length;
+
+    var total = x +y;
+
+    var mod = total% 100
+
+   var z = Math.floor(Math.random()*100);
+
+    var percentage = mod + z;
+
+    document.getElementById("match").onclick = function() {
+        document.getElementById("myD1").textContent = percentage + "%" ;
+    }
+
+</script>
+</body>
+</html>
