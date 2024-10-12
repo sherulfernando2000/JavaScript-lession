@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        *{
+
+        }
+
+        section{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center ;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px green solid;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgba(120, 227, 78, 0.62);
+        }
+
+        .ans{
+            background-color: green;
+            border-radius: 100%;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-self: center;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .operators{
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+<section>
+
+<form>
+    <h1>Calculator</h1>
+    <div>
+    <label for="num1">Num1</label>
+    <input type="text" id="num1">
+
+    <label for="num2">Num2</label>
+    <input type="text" id="num2">
+
+    </div>
+    <br>
+    <br>
+    <div class="operators">
+        <button type="button" id="+">+</button>
+        <button type="button" id="-">-</button>
+        <button type="button" id="*">*</button>
+        <button type="button" id="/">/</button>
+        <button type="button" id="%">%</button>
+    </div>
+
+
+    <br>
+    <br>
+
+        <!--<label for="answer">Answer</label>
+        <input type="text" id="answer">-->
+    <div class="ans">
+        <h1 id="answer1">...</h1>
+    </div>
+
+
+</form>
+</section>
+
+<script>
+
+//if-else
+   /* const calc = (num1, num2, operator) =>{
+       if(operator == "+"){
+           return +num1 + +num2;
+       }else if(operator == "-"){
+           return num1 - num2
+       }else if(operator == "*"){
+           return num1 * num2;
+       }else if(operator == "/"){
+           return num1 / num2;
+       }else if(operator == "%"){
+           return num1 % num2;
+       }
+    }*/
+
+    const calc= (num1, num2, operator) => {
+        switch (operator){
+            case "+":
+               return +num1 + +num2;
+             case "-":
+               return +num1 - +num2;
+             case "*":
+               return +num1 * +num2;
+             case "/":
+               return +num1 / +num2;
+             case "%":
+               return +num1 % +num2;
+
+        }
+    }
+
+
+    document.getElementById("+").addEventListener("click", function (){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        let answer = calc(num1,num2,"+");
+        console.log(answer);
+        document.getElementById("answer1").innerText = answer
+    })
+
+    document.getElementById("-").addEventListener("click", function (){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        let answer = calc(num1,num2,"-");
+        console.log(answer);
+        document.getElementById("answer1").innerText = answer
+    })
+
+    document.getElementById("*").addEventListener("click", function (){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        let answer = calc(num1,num2,"*");
+        console.log(answer);
+        document.getElementById("answer1").innerText = answer
+    })
+
+    document.getElementById("/").addEventListener("click", function (){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        let answer = calc(num1,num2,"/");
+        console.log(answer);
+        document.getElementById("answer1").innerText = answer
+    })
+
+    document.getElementById("%").addEventListener("click", function (){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        let answer = calc(num1,num2,"%");
+        console.log(answer);
+        document.getElementById("answer1").innerText = answer
+    })
+
+</script>
+
+</body>
+</html>

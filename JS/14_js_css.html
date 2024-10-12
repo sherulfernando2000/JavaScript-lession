@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS in JS</title>
+</head>
+
+<body>
+
+<h1>CSS</h1>
+
+<script>
+    /*document.getElementsByTagName("h1")[0].style.color = "red";
+    document.getElementsByTagName("h1")[0].style.background= "grey";
+    document.getElementsByTagName("h1")[0].style.fontSize= "200px";*/
+
+    let styles = "color:red; background: yellow";
+    document.getElementsByTagName("h1")[0].style.cssText = styles;
+
+
+
+</script>
+</body>
+</html>

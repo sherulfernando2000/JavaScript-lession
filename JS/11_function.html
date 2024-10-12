@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+
+
+<body>
+
+<script>
+    //fuction 1st method
+   /* function myFunction(para2,para3){
+        console.log("sherul");
+        var para1 = para2 + para3;
+        console.log("sum "+para1);  /!* to concate we can use + and , *!/
+        console.log("sum ",para1);
+
+    }
+    myFunction(2,3);
+    */
+
+
+
+    // Function Expression
+    /*const myFunction2 = function(num1,num2){
+        console.log("My function")
+        var total = num1 + num2;
+        console.log(total);
+    }
+
+    myFunction2(5,5);*/
+
+    // Function Constructor
+   /* const myFunction3 = new Function("arg1","arg2","return arg1 + arg2");
+    let result = myFunction3(10,20);
+    console.log("Result", result);*/
+
+
+    //Arrow Function
+    const myArrowFunction = (val1 , val2) => {
+        console.log("My Arrow Function")
+        console.log("sum" ,val1+val2)
+
+    }
+
+    myArrowFunction(10, 30);
+
+    //Annonymous Function - name ekak nathi function meka function expression wage thama but name ekak na
+    document.getElementById("myBtn").addEventListener("click",
+        function (){
+
+        }
+    )
+
+    //Annonymous Function
+    document.getElementById("myBtn").addEventListener("click",
+        () => {
+
+        }
+    )
+
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+
+
+<body>
+<h1>Arrays</h1>
+
+<script>
+   /* let array1 = [1,2,3,"Hello", function (){console.log("Hi")}];
+    console.log(array1);
+    console.log(array1.toString());*/
+
+
+    //constrctor based
+   /* let array2 = new Array(1,2,"hi",3.5);
+    console.log(array2);
+
+    console.log("index0", array2[0])
+    console.log("index1", array2[1])
+    console.log("index2", array2[2])
+    console.log("index3", array2[3])
+
+    array2[2] = "hello";
+    console.log("index2", array2[2])
+
+*/
+    //Array methods
+    //push - add element to the array
+   /* let array3 = ["sherul", "shenal","sehan"];
+    array3.push("akd");
+    console.log(array3.toString());*/
+
+    //pop - removes last elemt in array
+    /*array3.pop("akd");
+    console.log(array3.toString())*/
+
+    //shift - removes first element and return it
+    /*console.log(array3.shift())*/
+
+    //unshift - add elemnt to begining in array
+   /* array3.unshift("ranjan")
+    console.log(array3);*/
+
+    //concat
+    /*let num1Array = [1,2,3,4];
+    let num2Array = [5,6,7];
+
+    let num3Array = num1Array.concat(num2Array);
+    console.log(num1Array);
+    console.log(num2Array);
+    console.log(num3Array);
+
+    let num4Array = num2Array.concat(num1Array);
+    console.log(num4Array);*/
+
+    /*
+    let arr = [1,2,3,4,5,6,7];
+    let copy = arr.slice(2,5);
+    console.log(copy.toString());
+
+
+    console.log(arr.slice(-2));
+
+    let my_num_arr_copy = arr;
+    console.log(arr);
+    console.log(my_num_arr_copy);
+
+    my_num_arr_copy[0] = 10; //if something done to copy it changes the orginal array value
+   console.log(arr);
+   console.log(my_num_arr_copy);*/
+
+   //splice
+  /* let arr = [1,2,3,4,5,6,7];
+   arr.splice(5,4); //5  index eke idhan last index eka wenakan remove karanna.
+   console.log(arr);
+
+   arr.splice(2,3,"hello","me","i");
+   console.log(arr);*/
+
+
+
+   //sort()
+
+   /*let arr3 = [10,40,50,20,70,60,30];
+
+
+   for (var i =0; i<arr3.length;i++){
+   for (var j = 0; j < arr3.length; j++){
+       if (arr3[j]>arr3[j+1]){
+           let temp = arr3[j];
+           arr3[j] = arr3[j+1];
+           arr3[j+1] = temp;
+       }
+   }
+   }
+
+   console.log(arr3.toString());
+*/
+
+  /* let arr4 = [10,40,50,20,70,60,30,40];
+   let sorted_array = arr4.sort();
+    console.log(sorted_array);*/
+
+
+   /*let arr5 = [10,40,50,20,70,60,30,40];
+    //indexOf
+   console.log(arr5.indexOf(40));
+
+   //lastIndexOf
+   console.log(arr5.lastIndexOf(40));
+
+   //includes
+   console.log(arr5.includes(20));*/
+
+  /* //filter
+   let arr6 = [10,11,15,16,71,65,34,4];
+   let filteredArray = arr6.filter(function (item){
+       return item%2 == 0;
+   })
+
+    console.log("filtered array:" , filteredArray);
+   */
+
+   //map
+   let arr6 = ["usa","india","japan","sl"];
+    arr6.map((item,index) => {
+       console.log(index+": "+item);
+   });
+
+
+
+
+</script>
+</body>
+</html>
