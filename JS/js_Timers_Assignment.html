@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS timers Assignment</title>
+
+    <style>
+
+        section{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        section>div{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: #2d595c 2px solid;
+
+
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <section>
+        <div>
+            <h3 id="1">A</h3>
+        </div>
+        <div>
+            <h3 id="2">B</h3>
+        </div>
+        <div>
+            <h3 id="3">C</h3>
+        </div>
+        <div>
+            <h3 id="4">D</h3>
+        </div>
+        <div>
+            <h3 id="5">E</h3>
+        </div>
+        <div>
+            <h3 id="6">F</h3>
+        </div>
+    </section>
+
+    <script>
+        let arr = ["A","B","C","D","E","F"];
+
+        setInterval(()=>{
+            let lastLetter = arr.pop();
+            arr.unshift(lastLetter);
+            console.log(arr);
+            document.getElementById("1").innerText = arr[0];  // document.getElementsByTagName("h3")[0].innerText = arr[0];
+            document.getElementById("2").innerText = arr[1];
+            document.getElementById("3").innerText = arr[2];
+            document.getElementById("4").innerText = arr[3];
+            document.getElementById("5").innerText = arr[4];
+            document.getElementById("6").innerText = arr[5];
+
+
+        },3000)
+
+
+    </script>
+
+
+</body>
+</html>

@@ -9,7 +9,7 @@
 <body>
 
 <script>
-    //fuction 1st method
+    //function 1st method - declaration
    /* function myFunction(para2,para3){
         console.log("sherul");
         var para1 = para2 + para3;
@@ -38,16 +38,16 @@
 
 
     //Arrow Function
-    const myArrowFunction = (val1 , val2) => {
+   /* const myArrowFunction = (val1 , val2) => {
         console.log("My Arrow Function")
         console.log("sum" ,val1+val2)
 
     }
 
-    myArrowFunction(10, 30);
+    myArrowFunction(10, 30);*/
 
     //Annonymous Function - name ekak nathi function meka function expression wage thama but name ekak na
-    document.getElementById("myBtn").addEventListener("click",
+   /* document.getElementById("myBtn").addEventListener("click",
         function (){
 
         }
@@ -58,7 +58,42 @@
         () => {
 
         }
-    )
+    )*/
+
+
+
+    /*function testMethod(){
+        console.log(arguments);
+    }
+
+    testMethod();
+    testMethod(1,"2","hello",4);*/
+
+
+
+
+    function declartion(){
+        console.log("Normal declare");
+    }
+    declartion();
+
+    const expression = function (){
+        console.log("Expression");
+    }
+    expression();
+    const constructor = new Function("arg1","arg2","return arg1 + arg2");
+   console.log(constructor(10,20,40)) ;
+
+   const arrowFunction = () => {
+       console.log("arrow function");
+   }
+
+   arrowFunction();
+
+   document.getElementById("num1").addEventListener("click",function(){
+
+    });
+
 
 </script>
 </body>
