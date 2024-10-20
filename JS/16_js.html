@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js form table update</title>
+    <style>
+        body{
+            margin-left: 200px;
+            margin-top: 50px;
+        }
+        section{
+
+        }
+            table{
+                border: black 2px solid;
+            }
+
+            thead,td{
+                border: black 2px solid;
+            }
+
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: #2d595c;
+                border: black 2px solid;
+            }
+    </style>
+</head>
+
+
+<body>
+<section>
+    <form>
+        <label for="firstName">First Name</label><br>
+        <input type="text" placeholder="First Name" id="firstName"><br><br>
+
+        <label for="secondName">Last Name</label><br>
+        <input type="text" placeholder="Second Name" id="secondName"><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="text" placeholder="Second Name" id="email"><br><br>
+
+        <button type="button" id="save">Save</button>
+        <button type="button">update</button>
+        <button type="button">Delete</button>
+
+        <br><br>
+        <table>
+            <thead>
+             <th>FirstName</th>
+             <th>SecondName</th>
+             <th>Email</th>
+            </thead>
+
+            <tbody id="tbody">
+                <tr>
+                    <td>Sherul</td>
+                    <td>Fernando</td>
+                    <td>123@gmail.com</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </form>
+</section>
+
+    <div class="box" id="box"></div>
+
+
+<script>
+    document.getElementById("save").addEventListener('dblclick',function (){
+       let fName = document.getElementById("firstName").value;
+       let sName = document.getElementById("secondName").value;
+       let email = document.getElementById("email").value;
+
+       let inner_html = document.getElementById("tbody").innerHTML;
+
+      let new_html= inner_html+  "<tr><td>"+fName+"</td> <td>"+sName+"</td> <td>"+email+"</td></tr>"
+
+        document.getElementById("tbody").innerHTML = new_html;
+    });
+
+    document.getElementById("firstName").addEventListener('keyup',function (){
+        console.log("keyup")
+    })
+
+    document.getElementById("firstName").addEventListener('keydown',function (event){
+        console.log("keydown",event.key);
+        console.log("keydown",event.target.value);
+
+    })
+
+    document.getElementById("firstName").addEventListener('keypress',function (){
+        console.log("keypress")
+    })
+
+
+    document.getElementById("box").addEventListener('mouseover',function (){
+        console.log("mouse over")
+    })
+
+document.getElementById("box").addEventListener('mouseenter',function (){
+        console.log("mouse enter")
+    })
+
+document.getElementById("box").addEventListener('mouseout',function (){
+        console.log("mouse out")
+    })
+
+
+</script>
+
+</body>
+</html>

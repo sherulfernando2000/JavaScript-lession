@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery travesing</title>
+</head>
+
+
+<body>
+
+<section>
+    <ul>
+        <li>Backend</li>
+        <li>Frontend</li>
+        <li>
+            <ol>
+                <li>SriLanka</li>
+                <li>India</li>
+            </ol>
+        </li>
+    </ul>
+
+</section>
+
+
+
+<script src="../lib/jquery-3.7.1.min.js"></script>
+<script>
+    let parent = $("ol").parents();
+    console.log(parent)
+
+
+    let section_parent = $("ol").parentsUntil("ul")
+    console.log(section_parent);
+
+    let name = $("ul"). children().eq(2).children().eq(0).children().eq(1).text();
+    console.log(name);
+
+    let f = $('ol').children().first().text();
+    console.log("child -", f);
+
+    let l = $('ol').children().last().text();
+    console.log("child -", l);
+
+</script>
+
+
+</body>
+</html>

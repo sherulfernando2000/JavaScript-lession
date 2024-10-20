@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <h1>Sherul Dhanushka</h1>
+    <button>Send</button>
+    <input type="text" placeholder="your name">
+
+    <select>
+        <option value="java">Java</option>
+        <option value="Python">Python</option>
+        <option value="c#">C#</option>
+        <option value="go">Go</option>
+    </select>
+
+
+<script src="../lib/jquery-3.7.1.min.js"></script>
+<script>
+
+
+        /* $('button').click(function (){
+        console.log("clicked");
+    })*/
+
+
+       /* $("button").dblclick(function () {
+            console.log("double clicked")
+        });*/
+
+       /* $("button").mouseenter(function () {
+            console.log("jquery mouse entered")
+        });
+
+        $("h1").mouseleave(function (){
+            console.log("mouse leave")
+        });
+
+        $("h1").mouseup(function (){
+            console.log("mouse up")
+        });
+
+        $("h1").mousedown(function (){
+            console.log("mouse down")
+        });
+
+        $("input").focus(function (){
+            console.log("focused")
+        })
+
+        $("select").change(function (event){
+            console.log("jquery changed event!", event.target.value);
+        });
+*/
+
+        //on method
+      /* $("button").on('click',function (){
+           console.log("on method click");
+       })
+
+
+        $("input").on('input', function (event){
+            console.log("on method input", event.target.value);
+        })*/
+
+        $("button").on({
+            click:function (){
+                console.log("click event!")
+            },
+
+            dblclick:function (){
+                console.log("dbclick event!")
+             }
+
+
+        });
+
+</script>
+</body>
+</html>
