@@ -15,9 +15,32 @@
         }, 5000);*/
 
         //setInterval
-        setInterval(()=>{
+        /*setInterval(()=>{
             console.log("Interval")
-        },3000);
+        },3000);*/
+
+
+        /*let x = 0;
+        var timerId = setInterval(function () {
+            x++;
+            console.log(x);
+
+            if (x > 5) {
+                clearInterval(timerId);// stop the set Interval
+            }
+        }, 1000);
+*/
+        let x = 0;
+        let timerId = setInterval(function (){
+            console.log(x)
+            x++
+
+            if(x>5){
+                clearInterval(timerId);
+            }
+
+        }, 2000);
+
 
 
 

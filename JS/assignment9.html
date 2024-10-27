@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rider</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            color: #f47a84;
+        }
+
+        div{
+            width: 150px;
+            height: 75px;
+            border: black 2px solid;
+            margin: 5px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<section id="kitLight">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+</section>
+<hr>
+
+<section>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</section>
+
+<!--jquery-->
+<script src="../lib/jquery-3.7.1.min.js"></script>
+
+<script>
+    const light_count = 6;
+    let current_light = -1;
+    let direction = "RIGHT"; //RIGHT OR LEFT
+
+
+    updateLight = () =>{
+
+        if(direction === "RIGHT"){
+            current_light++;
+            $(".light").css("background", "white")
+
+            $(".light").eq(current_light-1).css("background", "#F47A84FF");
+            $(".light").eq(current_light).css("background", "red");
+            $(".light").eq(current_light+1).css("background", "#F6C0DBFF");
+
+
+            if(current_light === light_count-1){
+                direction = "LEFT"
+            }
+
+        }else{
+            current_light--;
+            $(".light").css("background", "white")
+            $(".light").eq(current_light-1).css("background", "#F6C0DBFF");
+            $(".light").eq(current_light).css("background", "red");
+            $(".light").eq(current_light+1).css("background", "#F47A84FF");
+
+            if(current_light === 0){
+                direction = "RIGHT"
+            }
+        }
+
+    }
+    let myInterval
+    $("#start").on('click',function (){
+         myInterval = setInterval(updateLight, 120)
+    })
+
+    $("#stop").on('click',function (){
+        clearInterval(myInterval)
+    })
+
+
+    let light_array = [];
+
+
+
+</script>
+
+</body>
+</html>
